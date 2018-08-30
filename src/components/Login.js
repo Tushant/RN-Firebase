@@ -16,7 +16,7 @@ export default class Login extends Component {
     getUserInfo = () => {
         auth.onAuthStateChanged(user => {
             if (user) {
-                // this.props.navigation.navigate("Todo");
+                this.props.navigation.replace("Todo");
             }
         });
     };
@@ -25,7 +25,7 @@ export default class Login extends Component {
         if (email && password) {
             auth.signInWithEmailAndPassword(email, password)
                 .then(respose => {
-                    this.props.navigation.navigate("Todo");
+                    this.props.navigation.replace("Todo");
                 })
                 .catch(error => {
                     this.setState({
