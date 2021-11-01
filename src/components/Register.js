@@ -28,7 +28,7 @@ export default class Register extends Component {
             } else {
                 this.setState({
                     error: true,
-                    message: "Both password must match"
+                    message: `Both password must match`
                 });
             }
         } else {
